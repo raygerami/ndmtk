@@ -1,6 +1,9 @@
-# Git for Network Discovery and Management Toolkit
+# Utilities
 
-This tool is a part of [Network Discovery and Management Toolkit](https://github.com/greenpau/ndmtk).
+These tools are part of [Network Discovery and Management Toolkit](https://github.com/greenpau/ndmtk).
+
+## Source Code Control wuth Git
+
 It allows checking the data collected from network devices in to a Git repository.
 
 The key points relates to the use of the tool:
@@ -12,15 +15,15 @@ The key points relates to the use of the tool:
 
 The tool requires [GitPython](http://gitpython.readthedocs.io).
 
-```
+```bash
 pip install gitpython --user
 ```
 
-## Getting Started
+### Getting Started
 
 First, create and initialize a repository:
 
-```
+```bash
 mkdir -p /opt/ndmtk-data && cd /opt/ndmtk-data && git init
 ```
 
@@ -41,7 +44,6 @@ to `/tmp/runner-data`.
 Then, run this tool to commit the data in `/tmp/runner-data` to `/opt/ndmtk-data`
 Git repository.
 
-```
+```bash
 ndmtk-git -r /opt/ndmtk-data -b master -d /tmp/runner-data -l 1 --commit
 ```
-
